@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INSYSCOM E-LEARNING</title>
+	<script language="JavaScript">
+		<!-- fungsi alphabet -->
+		function Alphabet(nilai, pesan) {
+			var alphaExp = /^[a-zA-Z]+$/;
+			if(nilai.value.match(alphaExp)) {
+				return true;
+			}
+			else {
+				alert(pesan);
+				nilai.focus();
+				return false;
+			}
+		}
+		<!-- fungsi Username  -->
+		function cekUsername(nilai, pesan) {
+			var email = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+			if(nilai.value.match(Username)) {
+				return true;
+			}
+			else {
+				alert(pesan);
+				nilai.focus();
+				return false;
+			}
+		}
+		function validasi() {
+			Alphabet(document.getElementById('Password'), 'Tidak Boleh Kosong!!');
+			cekEmail(document.getElementById('Username'), 'Tidak Boleh Kosong!!');
+		}
+	</script>
+	<style>
+		body{
+			background-color: #E1EEF6;
+        }
+        .head{
+        	background-color: #7187CE;
+        	height: 110px;
+        	width: 100%;
+        }
+		.head img{
+			position: absolute;
+		}
+		.logo.tengah{
+			float: center;
+			position: inherit;
+		}
+		.login{
+			margin-top: 20px;
+		}
+		.form{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+		.klik{
+		background-color: grey;
+		width: 50%;
+		border: none;
+		border-radius: 3px;
+		padding: 5px 10px;
+		}
+	</style>
+</head>
+<body style="background-color: ">
+	<div class="head">
+		<img src=INSYSCOM.png width="20%">		
+	</div>
+	<center><table border="0">
+		<div class="logo tengah">
+			<br>
+			<br>
+			<br>
+			<img src="Group 63.png" height="350">
+			<br>
+		</div>
+		<div class="login">
+			<div class="login">
+			<tr><center>
+			<tr></tr>
+			<tr></tr>
+			<tr><td><input type=text class="form" placeholder="Username" id="Username"></td></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr><td><input type=text class="form" placeholder="Password" id="Password"></td></tr>
+			<tr></tr>
+			<tr></tr>
+			<tr></tr>
+			<td><center><a href="2.html"><input type="submit" class="klik" value="Login" onclick="validasi()"></a></center></td>
+			</tr></center>
+		</div>
+	</table></center>
+</body>
+</html>
