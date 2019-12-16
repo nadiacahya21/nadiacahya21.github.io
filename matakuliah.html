@@ -90,22 +90,6 @@
         <a type="text" class="carii"><button><img src="magnifier-tool.png" height="10"></button></a>
     </form>
     </div>
-
-    <script>
-    	$(document).ready(function() {
-    		$('#nama').on('keyup', function() {
-    			a = $('#nama').val();
-    			$.ajax({
-    				type 	: "POST",
-    				url 	: "post.php",
-    				data 	: {nama:a},
-    				success 	: function(data) {
-    					$('.iya').html(data);
-    				}
-    			});
-    		})
-    	})
-    </script>
 	<div class="profil2">
 		<td><a class="profil2" href="profil.html"><img src="user-silhouette.png" height="50"></a></td>
 	</div>
