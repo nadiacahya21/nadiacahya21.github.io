@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>INSYSCOM E-LEARNING</title>
+	
+<script>
+</script>
+	<style>
+		body{
+			background-color: #E1EEF6;
+			font-family: Lucida Sans Unicode;
+        }
+        .head{
+        	background-color: #7187CE;
+        	height: 110px;
+        	width: 100%;
+        }
+		.head img{
+			position: absolute;
+		}
+		.logo.tengah{
+			float: center;
+			position: inherit;
+		}
+		.login{
+			padding: 20px;
+			background: white;
+			width: 25%;
+			margin-top: 20px;
+			margin-bottom: 50px
+		}
+		.form{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
+		.klik{
+		background-color: #7187CE;
+		color: white;
+		width: 70%;
+		border: none;
+		border-radius: 3px;
+		padding: 7px;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<img src=INSYSCOM.png width="20%">		
+	</div>
+	<center><table border="0">
+		<div class="logo tengah">
+			<br>
+			<br>
+			<br>
+			<img src="Group 63.png" id="gambar" width="200px">
+			<br>
+		</div>
+		<div class="login">
+	<form>
+		<label style="margin-bottom: 30px; font-size: 15px">Masukkan Data</label>
+		<input type="text" name="username" placeholder="Username" id="username" class="form">
+   		<br>
+   		<br>
+        <input type="password" name="password" placeholder="Password" id="password" class="form">
+        <br>
+        <br>
+        <input type="button" onclick="login()" value="Login" class="klik">
+    </form>
+		</div>
+	</table></center>
+</body>
+<script>
+		function login() {
+			var user = $('#username').val();
+			var pass = $('#password').val();
+			if (user=="") {
+				alert('Masukkan username');
+			} else if (pass=="") {
+				alert('Password salah');
+			} else {
+				window.location = 'dashboard.html';
+			}
+		}
+</script>
+</html>

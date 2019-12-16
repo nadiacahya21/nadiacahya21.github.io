@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>INSYSCOM E-LEARNING</title>
+	<style>
+		body{
+			background-color: #E1EEF6;
+			font-family: Lucida Sans Unicode;
+        }
+		.header{
+			background-color: #7187CE;
+			height: 110px;
+			width: 100%;
+		}
+		.body{
+			background-image: #E1EEF6;
+			height: 100%;
+			width: 100%;
+		}
+		.cari{
+			float: right;
+			margin-top: -60px;
+			margin-right: 500px;
+			}
+		.profil2{
+			position: absolute;
+			top: 50px;
+			right: 100px;
+		}
+		.mati{
+			position: absolute;
+			top: 60px;
+			right: 50px;
+		}
+		.samping{
+			border-style: solid;
+  			border-width: thin;
+			float: right;
+			margin-top: -10px;
+			margin-right: 50px;
+			width: 40%;
+			line-height: 2;
+		}
+		.profilnya{
+			border-style: solid;
+  			border-width: thin;
+			background-color: white;
+			float: left;
+			line-height: 2.5;
+			width: 40%;
+		}
+		@media screen and (max-width: 720px) {
+			.profilnya, .edit{
+				width: 50%;
+				left: 50px;
+			}
+			.header{
+				float: none;
+			}
+			.samping{
+				float: none;
+			}
+			.cari{
+				float: none;
+			}	
+	</style>
+</head>
+<body>
+	<table>
+	<div class="header">
+		<img src="INSYSCOM.png" width="20%">
+	</div>
+	<div class="cari">
+	<form>
+        <input type="search" id="nama">
+        <a type="text" class="carii"><button><img src="magnifier-tool.png" height="10"></button></a>
+    </form>
+    </div>
+
+    <script>
+    	$(".carii").click(function() {
+    		var a = $("#nama").val();
+    		alert('data '+a+' tidak ditemukan');
+    	})
+    </script>
+	<div class="profil2">
+		<td><a class="profil2" href="profil.html"><img src="user-silhouette.png" height="50"></a></td>
+	</div>
+	<div class="mati">
+		<tr><td>
+        <a class="mati" href="index.html"><button type="button"><img src="25706.png" height="17"></button></a>
+    	</td></tr>
+	</div>
+	</table>
+	<table border="1" bgcolor="white" width="250">
+		<div class="dashboard">
+			<td><a style="text-decoration: none;color: black;" class="dashboard" href="dashboard.html"><b><center>DASHBOARD</center></b></a></td>
+		</div>
+		<div class="profil" width="250">
+			<td><a style="text-decoration: none;color: black;" class="profil" href="profil.html"><b><center>PROFILE</center></b></a></td>
+		</div>
+	</table>
+	<br>
+	<div class="profilnya" style="margin-left: 20px">
+		<table border="0" bgcolor="white" width="100%">
+				<table border="0" width="100%" class="judultengah" style="text-align: center;font-size: 20px;">
+					<tr><td><center><b>USER PROFILE</b></center></td></tr>
+					<div class="edit">
+						<tr style="background: #7187CE"><td><b><i><a href="editprofil.html" style="text-decoration: none; float: right; margin-right: 10px; color: white">EDIT PROFIL</a></i></b></td></tr>
+					</div>
+				</table>
+				<table border="0" bgcolor="white" width="100%">
+					<tr>
+						<td>NAMA</td>
+						<td>: NADIA CAHYA</td>
+					</tr>
+					<tr>
+						<td>NIM</td>
+						<td>: 182199</td>
+					</tr>
+					<tr>
+						<td>EMAIL</td>
+						<td>: Nadd@yaho</td>
+					</tr>
+				</table>
+		</table>
+	</div>	
+	<div class="samping" width="100%" style="padding: 10px; background: white">
+		<h2><b><i><center>COURSE DETAIL</center></i></b></h2>
+		<ul>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ANALISA DAN PERANCANGAN SISTEM</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PEMROGRAMAN BERBASIS OBJEK I</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">JARINGAN KOMPUTER</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PENGANTAR KECERDASAN BUATAN</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PERANCANGAN WEBSITE</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ETIKA PROFESI</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ARSITEKTUR KOMPUTER</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">RISET OPERASI</a></li>
+			<li><a style="text-decoration: none;color: black;" href="matakuliah.html">TEORI GRAF</a></li>
+		</ul>
+		</table>
+	</div>
+</body>
+</html>
