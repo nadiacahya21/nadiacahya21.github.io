@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+	<title>INSYSCOM E-LEARNING</title>
+	<style>
+		body{
+			background-color: #E1EEF6;
+			font-family: Lucida Sans Unicode;
+        	}
+		.header{
+			background-color: #7187CE;
+			height: 110px;
+			width: 100%;
+		}
+		.cari{
+			float: right;
+			margin-top: -60px;
+			margin-right: 500px;	
+		}
+		.profil2{
+			position: absolute;
+			top: 50px;
+			right: 100px;
+		}
+		.mati{
+			position: absolute;
+			top: 60px;
+			right: 50px;
+		}
+		.Private{
+			border-style: solid;
+  			border-width: thin;
+			float: right;
+		}
+		.private .private-files{
+			background: #7187CE;
+		}
+		.Timeline{
+			border-style: solid;
+  			border-width: thin;
+			float: right;
+			margin-top: 50px;
+		}
+		.Users{			
+			border-style: solid;
+  			border-width: thin;
+			float: right;
+			margin-top: 50px;
+		}
+		.matkul{
+			border: double;
+			background-color: white;
+			float: left;
+			width: 70%;
+			line-height: 2.5;
+		}
+		@media screen and (max-width: 720px) {
+			.profil2{
+				float: none;
+			}
+			.matkul{
+				width: 50%;
+				left: 50px;
+			}
+			.header{
+				float: none;
+			}
+			.Private, .Timeline, .Users, .matkul {
+				float: none;
+				width: 100%;
+				
+			}
+			.cari{
+				float: none;
+		}
+	</style>
+</head>
+<body>
+	<table>
+	<div class="header">
+		<img src="INSYSCOM.png" width="20%">
+	</div>
+	<div class="cari">
+	<form>
+        <input type="search" id="nama" onkeyup="carii()">
+        <a type="text" class="carii"><button><img src="magnifier-tool.png" height="10"></button></a>
+		<div id="coba"></div>
+    </form>
+    </div>
+    <script>
+    	function carii() {
+    		nm = $('#nama').val();
+    		$.ajax({
+    			url 	: 'coba.php',
+    			data 	: {nama:nm},
+    			type 	: 'POST',
+    			dataType 	: 'html',
+    			success 	: function(data) {
+    				$('#coba').html(data);
+    			}
+    		})
+    	}
+    // $(document).ready(function() {
+    // 	$("#nama").on('mouseenter', function() {
+    // 		var a = $("#nama").val();
+    // 		$.ajax({
+    // 			type 	: "POST",
+    // 			url 	: "coba.php",
+    // 			data 	: "nama="+a,
+    // 			success 	: function(data) {
+    // 				$('#coba').html(data);
+    // 			}
+    // 		});
+
+    // 	});
+    // })
+    </script>
+	<div class="profil2">
+		<td><a class="profil2" href="profil.html"><img src="user-silhouette.png" height="50"></a></td>
+	</div>
+	<div class="mati">
+		<tr>
+			<td>
+        	<a class="mati" href="index.html"><button><img src="25706.png" height="17"></button></a>
+    	</td>
+    	</tr>
+	</div>
+	</table>
+	<table border="1" bgcolor="white" width="250">
+		<div class="dashboard">
+			<td><a style="text-decoration: none;color: black;" class="dashboard" href="dashboard.html"><b><center>DASHBOARD</center></b></a></td>
+		</div>
+		<div class="profil" width="250">
+			<td><a style="text-decoration: none;color: black;" class="profil" href="profil.html"><b><center>PROFILE</center></b></a></td>
+		</div>
+		<div class="course">
+		<table border="0">
+			<td></td>
+			<tr><td><b>COURSE</b></td></tr>
+			<td></td>
+		</table>
+		</div>
+	</table>
+	<table border="0" bgcolor="white">
+		<div class="matkul">
+			<ul>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ANALISA DAN PERANCANGAN SISTEM</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PEMROGRAMAN BERBASIS OBJEK I</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">JARINGAN KOMPUTER</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PENGANTAR KECERDASAN BUATAN</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">PERANCANGAN WEBSITE</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ETIKA PROFESI</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">ARSITEKTUR KOMPUTER</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">RISET OPERASI</a></li>
+				<li><a style="text-decoration: none;color: black;" href="matakuliah.html">TEORI GRAF</a></li>
+			</ul>
+		</div>
+	</table>
+	<div class="Private" style="background: white">
+	<table border=1; bgcolor="white" width="235px" style="background-color: #98B4FF; width: 100%">
+		<center>
+		<tr><td><img src="folder.png" height="20"><b>Private Files</b></td></tr>
+		<table border="0" bgcolor="white" width="235px">
+		<tr><td><center><a style="text-decoration: none;color: black;" class="private" href="privatefile.html">Manage Private File</a></center></td></tr>
+		</table>
+		</center>
+	</table>
+	</div>
+	<div class="Timeline" style="background: white">
+	<table border=1 bgcolor="white" width="235px" style="background-color: #98B4FF; width: 100%">
+		<tr><td><b><a style="text-decoration: none;color: black;" href="timeline.html"><img src="clock.png" height="20" class="jam">Timeline</a></b></td></tr>
+		<table border="0" bgcolor="white" width="235px">
+		<tr><td><b><center>WEDNESDAY, 11 SEPTEMBER</center></b></td></tr>
+		<tr><td><img src="file.png" height="15"><a style="text-decoration: none;color: black;" class="deadline" href="uploadtugas.html">Tugas - Resume is due</a></td></tr>
+		<tr><td>Riset Operasi</td></tr>
+		<tr><td><img src="file.png" height="15"><a style="text-decoration: none;color: black;" class="deadline" href="uploadtugas.html">Tugas - Membuat Soal is due</a></td></tr>
+		<tr><td>Perancangan Website</td></tr>
+		</table>
+	</table>	
+	</div>
+	<div class="Users" style="background: white; margin-bottom: 30px">
+	<table border=1 bgcolor="white" width="235px" style="background-color: #98B4FF; width: 100%">
+		<tr><td><b><img src="multiple-users-silhouette.png" height="20">Online Users</b></td></tr>
+		<table bgcolor="white" border="0" width="235px">
+		<tr><td><center>2 Online Users<i> (Last 5 Minute)</i></center></td></tr>
+		<tr><td><img src="user-silhouette.png" height="15">Gledek Halilintar-191019</td></tr>
+		<tr><td><img src="user-silhouette.png" height="15">Lia Ricis-181130</td></tr>
+		</table>
+	</table>
+	</div>
+</body>
+</html>
